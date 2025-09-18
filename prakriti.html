@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prakriti Assessment</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f8f2;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #4a772f;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 { margin: 0; }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      color: #4a772f;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    .question p {
+      margin: 0 0 10px;
+      font-weight: 600;
+      color: #2d2d2d;
+    }
+    label {
+      display: block;
+      margin: 6px 0;
+      cursor: pointer;
+    }
+    input[type="text"], input[type="number"], select {
+      padding: 10px;
+      width: 280px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background: #4a772f;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover { background: #365d23; }
+    .result {
+      margin-top: 30px;
+      padding: 20px;
+      background: #e9f7e9;
+      border: 1px solid #cde3cd;
+      border-radius: 10px;
+    }
+    .result h2 { color: #2f5d1f; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Prakriti Assessment Questionnaire</h1>
+  </header>
+
+  <main>
+    <form id="quizForm">
+      <!-- Personal Information -->
+      <div class="section">
+        <h2>Personal Information</h2>
+        <label>Name: <br><input type="text" name="name" required></label>
+        <label>Age: <br><input type="number" name="age" required></label>
+        <label>Sex: <br>
+          <select name="sex" required>
+            <option value="">--Select--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Questions -->
+      <div class="section">
+        <h2>Assessment Questions</h2>
+
+        <!-- Q1 to Q20 -->
+        <div class="question"><p>1. What is your body frame?</p>
+          <label><input type="radio" name="q1" value="vata"> Thin (Vata)</label>
+          <label><input type="radio" name="q1" value="pitta"> Medium (Pitta)</label>
+          <label><input type="radio" name="q1" value="kapha"> Heavy or well-built (Kapha)</label>
+        </div>
+
+        <div class="question"><p>2. Type of Hair</p>
+          <label><input type="radio" name="q2" value="vata"> Dry, Split Ends (Vata)</label>
+          <label><input type="radio" name="q2" value="pitta"> Normal, Thin, More Hair Fall (Pitta)</label>
+          <label><input type="radio" name="q2" value="kapha"> Greasy, Heavy (Kapha)</label>
+        </div>
+
+        <div class="question"><p>3. Color of Hair</p>
+          <label><input type="radio" name="q3" value="vata"> Pale Brown (Vata)</label>
+          <label><input type="radio" name="q3" value="pitta"> Red or Brown (Pitta)</label>
+          <label><input type="radio" name="q3" value="kapha"> Jet Black (Kapha)</label>
+        </div>
+
+        <div class="question"><p>4. Skin</p>
+          <label><input type="radio" name="q4" value="vata"> Dry, Rough (Vata)</label>
+          <label><input type="radio" name="q4" value="pitta"> Soft, Sweaty, Acne Prone (Pitta)</label>
+          <label><input type="radio" name="q4" value="kapha"> Moist, Greasy (Kapha)</label>
+        </div>
+
+        <div class="question"><p>5. Complexion</p>
+          <label><input type="radio" name="q5" value="vata"> Dark, Blackish (Vata)</label>
+          <label><input type="radio" name="q5" value="pitta"> Pink to Red (Pitta)</label>
+          <label><input type="radio" name="q5" value="kapha"> Glowing, Fair (Kapha)</label>
+        </div>
+
+        <div class="question"><p>6. Body Weight</p>
+          <label><input type="radio" name="q6" value="vata"> Low, Difficult to gain (Vata)</label>
+          <label><input type="radio" name="q6" value="pitta"> Medium, Can fluctuate (Pitta)</label>
+          <label><input type="radio" name="q6" value="kapha"> Overweight, Difficult to lose (Kapha)</label>
+        </div>
+
+        <div class="question"><p>7. Nails</p>
+          <label><input type="radio" name="q7" value="vata"> Blackish, Small, Brittle (Vata)</label>
+          <label><input type="radio" name="q7" value="pitta"> Reddish, Small (Pitta)</label>
+          <label><input type="radio" name="q7" value="kapha"> Pinkish, Big, Smooth (Kapha)</label>
+        </div>
+
+        <div class="question"><p>8. Teeth</p>
+          <label><input type="radio" name="q8" value="vata"> Irregular, Blackish, Very Small/Big (Vata)</label>
+          <label><input type="radio" name="q8" value="pitta"> Medium Sized, Yellowish (Pitta)</label>
+          <label><input type="radio" name="q8" value="kapha"> Large, Shining White (Kapha)</label>
+        </div>
+
+        <div class="question"><p>9. Pace of Work</p>
+          <label><input type="radio" name="q9" value="vata"> Very Fast, Impulsive (Vata)</label>
+          <label><input type="radio" name="q9" value="pitta"> Moderate, Determined (Pitta)</label>
+          <label><input type="radio" name="q9" value="kapha"> Slow, Steady (Kapha)</label>
+        </div>
+
+        <div class="question"><p>10. Mental Activity</p>
+          <label><input type="radio" name="q10" value="vata"> Quick, Restless (Vata)</label>
+          <label><input type="radio" name="q10" value="pitta"> Sharp, Aggressive (Pitta)</label>
+          <label><input type="radio" name="q10" value="kapha"> Calm, Stable (Kapha)</label>
+        </div>
+
+        <div class="question"><p>11. Appetite</p>
+          <label><input type="radio" name="q11" value="vata"> Irregular, Variable (Vata)</label>
+          <label><input type="radio" name="q11" value="pitta"> Strong, Intense Hunger (Pitta)</label>
+          <label><input type="radio" name="q11" value="kapha"> Slow, Low Hunger (Kapha)</label>
+        </div>
+
+        <div class="question"><p>12. Digestion</p>
+          <label><input type="radio" name="q12" value="vata"> Irregular, Bloating (Vata)</label>
+          <label><input type="radio" name="q12" value="pitta"> Strong, Quick Digestion (Pitta)</label>
+          <label><input type="radio" name="q12" value="kapha"> Sluggish, Heavy (Kapha)</label>
+        </div>
+
+        <div class="question"><p>13. Thirst</p>
+          <label><input type="radio" name="q13" value="vata"> Variable, Not Consistent (Vata)</label>
+          <label><input type="radio" name="q13" value="pitta"> Excessive, Frequent (Pitta)</label>
+          <label><input type="radio" name="q13" value="kapha"> Less, Not Frequent (Kapha)</label>
+        </div>
+
+        <div class="question"><p>14. Sweating</p>
+          <label><input type="radio" name="q14" value="vata"> Minimal (Vata)</label>
+          <label><input type="radio" name="q14" value="pitta"> Excessive, Strong Odor (Pitta)</label>
+          <label><input type="radio" name="q14" value="kapha"> Moderate, No Strong Odor (Kapha)</label>
+        </div>
+
+        <div class="question"><p>15. Sleep</p>
+          <label><input type="radio" name="q15" value="vata"> Disturbed, Short (Vata)</label>
+          <label><input type="radio" name="q15" value="pitta"> Moderate, Average Hours (Pitta)</label>
+          <label><input type="radio" name="q15" value="kapha"> Deep, Long Hours (Kapha)</label>
+        </div>
+
+        <div class="question"><p>16. Memory</p>
+          <label><input type="radio" name="q16" value="vata"> Quick to Learn, Quick to Forget (Vata)</label>
+          <label><input type="radio" name="q16" value="pitta"> Sharp, Good Retention (Pitta)</label>
+          <label><input type="radio" name="q16" value="kapha"> Slow to Learn, Strong Retention (Kapha)</label>
+        </div>
+
+        <div class="question"><p>17. Emotional Nature</p>
+          <label><input type="radio" name="q17" value="vata"> Anxious, Worry-Prone (Vata)</label>
+          <label><input type="radio" name="q17" value="pitta"> Angry, Aggressive (Pitta)</label>
+          <label><input type="radio" name="q17" value="kapha"> Calm, Forgiving (Kapha)</label>
+        </div>
+
+        <div class="question"><p>18. Tolerance to Weather</p>
+          <label><input type="radio" name="q18" value="vata"> Poor Tolerance to Cold (Vata)</label>
+          <label><input type="radio" name="q18" value="pitta"> Poor Tolerance to Heat (Pitta)</label>
+          <label><input type="radio" name="q18" value="kapha"> Good Tolerance Generally (Kapha)</label>
+        </div>
+
+        <div class="question"><p>19. Voice</p>
+          <label><input type="radio" name="q19" value="vata"> Low, Unsteady (Vata)</label>
+          <label><input type="radio" name="q19" value="pitta"> Sharp, Commanding (Pitta)</label>
+          <label><input type="radio" name="q19" value="kapha"> Deep, Pleasant (Kapha)</label>
+        </div>
+
+        <div class="question"><p>20. Walking Style</p>
+          <label><input type="radio" name="q20" value="vata"> Fast, Restless (Vata)</label>
+          <label><input type="radio" name="q20" value="pitta"> Determined, Steady (Pitta)</label>
+          <label><input type="radio" name="q20" value="kapha"> Slow, Graceful (Kapha)</label>
+        </div>
+      </div>
+
+      <button type="button" onclick="calculateResult()">Submit</button>
+    </form>
+
+    <div id="result" class="result" style="display:none;"></div>
+  </main>
+
+  <script>
+    function calculateResult() {
+      let form = document.forms['quizForm'];
+      let name = form['name'].value;
+      let age = form['age'].value;
+      let sex = form['sex'].value;
+
+      let scores = { vata: 0, pitta: 0, kapha: 0 };
+
+      for (let i = 1; i <= 20; i++) {
+        let ans = form["q" + i]?.value;
+        if (ans) scores[ans]++;
+      }
+
+      let total = scores.vata + scores.pitta + scores.kapha;
+      if (total === 0) {
+        alert("Please answer the questions!");
+        return;
+      }
+
+      let vataPercent = ((scores.vata / total) * 100).toFixed(1);
+      let pittaPercent = ((scores.pitta / total) * 100).toFixed(1);
+      let kaphaPercent = ((scores.kapha / total) * 100).toFixed(1);
+
+      let dominant = Object.keys(scores).reduce((a,b) => scores[a] > scores[b] ? a : b);
+
+      let description = {
+        vata: "Predominantly Vata: Creative, energetic, but prone to anxiety and irregular habits.",
+        pitta: "Predominantly Pitta: Sharp-minded, ambitious, with strong digestion and leadership qualities.",
+        kapha: "Predominantly Kapha: Calm, stable, compassionate, with good stamina but may gain weight easily."
+      };
+
+      document.getElementById("result").style.display = "block";
+      document.getElementById("result").innerHTML =
+        `<h2>Your Prakriti Result</h2>
+         <p><b>Name:</b> ${name}<br>
+         <b>Age:</b> ${age}<br>
+         <b>Sex:</b> ${sex}</p>
+         <p><b>Vata:</b> ${vataPercent}%<br>
+         <b>Pitta:</b> ${pittaPercent}%<br>
+         <b>Kapha:</b> ${kaphaPercent}%</p>
+         <p><b>Dominant Dosha:</b> ${dominant.toUpperCase()}</p>
+         <p>${description[dominant]}</p>`;
+    }
+  </script>
+</body>
+</html>
